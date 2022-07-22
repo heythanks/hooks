@@ -37,6 +37,7 @@ const getCache = (key: CachedKey) => {
   return cache.get(key);
 };
 
+// 一个缓存器
 const clearCache = (key?: string | string[]) => {
   if (key) {
     const cacheKeys = Array.isArray(key) ? key : [key];

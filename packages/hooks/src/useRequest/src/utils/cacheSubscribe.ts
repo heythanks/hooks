@@ -1,3 +1,4 @@
+/**观察者模式 */
 type Listener = (data: any) => void;
 const listeners: Record<string, Listener[]> = {};
 

@@ -36,6 +36,7 @@ export default class Fetch<TData, TParams extends any[]> {
     this.subscribe();
   }
 
+  // 运行插件处理函数
   runPluginHandler(event: keyof PluginReturn<TData, TParams>, ...rest: any[]) {
     // @ts-ignore
     const r = this.pluginImpls.map((i) => i[event]?.(...rest)).filter(Boolean);
